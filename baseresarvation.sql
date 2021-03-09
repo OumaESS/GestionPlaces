@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 05 mars 2021 à 14:51
+-- Généré le :  lun. 08 mars 2021 à 10:57
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -48,8 +48,10 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `dateResv` date DEFAULT NULL,
   `isAccept` tinyint(1) DEFAULT NULL,
   `id_st` int(11) DEFAULT NULL,
+  `idtype` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_res`),
-  KEY `id_st` (`id_st`)
+  KEY `id_st` (`id_st`),
+  KEY `idtype` (`idtype`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -79,6 +81,20 @@ CREATE TABLE IF NOT EXISTS `student` (
   `is_accept` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_std`),
   KEY `id_user` (`id_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `typereservation`
+--
+
+DROP TABLE IF EXISTS `typereservation`;
+CREATE TABLE IF NOT EXISTS `typereservation` (
+  `id_type` int(11) NOT NULL AUTO_INCREMENT,
+  `nbrPlace` int(11) DEFAULT NULL,
+  `typeRes` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -115,7 +131,8 @@ ALTER TABLE `admin`
 -- Contraintes pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`id_st`) REFERENCES `student` (`id_std`);
+  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`id_st`) REFERENCES `student` (`id_std`),
+  ADD CONSTRAINT `reservation_ibfk_2` FOREIGN KEY (`idtype`) REFERENCES `typereservation` (`id_type`);
 
 --
 -- Contraintes pour la table `student`
