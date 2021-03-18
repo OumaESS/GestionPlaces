@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/gestionplaces</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- Type de la base de données -->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+        <mapping class="org.example.Entity.RoleEntity"/>
+        <mapping class="org.example.Entity.UseradminEntity"/>
+        <mapping class="org.example.Entity.TypereservationEntity"/>
+
+        <mapping class="org.example.Entity.StudentEntity"/>
+        <mapping class="org.example.Entity.AdminEntity"/>
+        <mapping class="org.example.Entity.ReservationEntity"/>
+
+
+
+    </session-factory>
+</hibernate-configuration>
