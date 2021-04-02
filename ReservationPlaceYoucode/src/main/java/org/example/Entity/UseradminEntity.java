@@ -2,7 +2,6 @@ package org.example.Entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
 
 
 @Entity
@@ -23,8 +22,11 @@ public class UseradminEntity implements Serializable {
     @Column(nullable = false)
     private int  phone;
 
+    @Column(nullable = false)
+    private boolean accepted;
+
     @OneToOne
-    private RoleEntity role;
+   private RoleEntity role;
 
     public UseradminEntity() {
     }
@@ -47,6 +49,23 @@ public class UseradminEntity implements Serializable {
         this.phone = phone;
         this.role = role;
     }
+
+    public UseradminEntity(int id, String firstName, String lastName, String email, String password) {
+        this.idUser = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+
+    }
+
+    public UseradminEntity(int id, boolean accepted) {
+        this.idUser = id;
+        this.accepted=accepted;
+
+    }
+
+
 
     public int getId() {
         return idUser;
@@ -116,4 +135,14 @@ public class UseradminEntity implements Serializable {
                 ", role=" + role.getRoleName() +
                 '}');
     }
+
+    public boolean isAccepted() {
+        return accepted;
+    }
+
+    public boolean setAccepted(boolean accepted) {
+       return this.accepted = accepted;
+    }
+
+
 }

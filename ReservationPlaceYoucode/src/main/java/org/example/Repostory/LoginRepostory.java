@@ -1,7 +1,7 @@
 package org.example.Repostory;
 
 import org.example.Entity.UseradminEntity;
-import org.example.HibernateUtil;
+import org.example.util.HibernateUtil;
 import org.hibernate.Session;
 
 import javax.persistence.Query;

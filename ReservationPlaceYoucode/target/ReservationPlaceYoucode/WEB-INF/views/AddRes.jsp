@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <!-- Required Fremwork -->
@@ -121,13 +122,13 @@
                             </ul>
                         <li class="user-profile header-notification">
                             <a href="#!" class="waves-effect waves-light">
-                                <span>John Doe</span>
+                                <span><c:out value="${sessionScope.Fname}" /> <c:out value="${sessionScope.lasname}" /></span>
                                 <i class="ti-angle-down"></i>
                             </a>
                             <ul class="show-notification profile-notification">
                                 <li class="waves-effect waves-light">
-                                    <a href="user-profile.html">
-                                        <i class="ti-user"></i> Profile
+                                    <a href="EditPfS">
+                                        <i class="ti-user"></i> Editer profile
                                     </a>
                                 </li>
                                 <li class="waves-effect waves-light">
@@ -136,13 +137,14 @@
                                     </a>
                                 </li>
                                 <li class="waves-effect waves-light">
-                                    <a href="auth-normal-sign-in.html">
+                                    <a href="loginDirect">
                                         <i class="ti-layout-sidebar-left"></i> Logout
                                     </a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -156,16 +158,17 @@
                             <div class="main-menu-header" style="background-image: url("<c:url value="/resources/images/userbg.jpg"/>");">
 
                             <div class="user-details">
-                                <span id="more-details">John Doe<i class="fa fa-caret-down"></i></span>
+                                <span id="more-details"><c:out value="${sessionScope.Fname}" /> <c:out value="${sessionScope.lasname}" /><i class="fa fa-caret-down"></i></span>
                             </div>
                         </div>
 
                         <div class="main-menu-content">
                             <ul>
                                 <li class="more-details">
-                                    <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
-                                    <a href="auth-normal-sign-in.html"><i
-                                            class="ti-layout-sidebar-left"></i>Logout</a>
+                                    <a href="EditPfS">
+                                        <i class="ti-user"></i> Editer profile
+                                    </a>
+                                         <a href="loginDirect">  <i class="ti-layout-sidebar-left"></i>Logout</a>
                                 </li>
                             </ul>
                         </div>
@@ -267,22 +270,17 @@
                                 <div class="card-body">
                                     <h5 class="card-title"></h5>
 
-                                    <form class="form-horizontal" action="insert" method="post">
-
-
-                                        <c:if test="${client != null}">
-                                        <input type="hidden" name="id" />
-                                        </c:if>
+                                    <form:form class="form-horizontal" modelAttribute="res" action="prossecRes" method="post">
 
 
                                         <div class="form-group row">
-                                            <label class="col-sm-2">Type de Reservation </label>
+                                            <label class="col-sm-2">Type of Reservation </label>
                                             <div class="col-sm-10">
-                                                <select class="form-control">
-                                                    <option>09:00--->17:00</option>
-                                                    <option>17:00--->20:00</option>
-                                                    <option>Week end</option>
-                                                </select>
+                                                <form:select path="typeRes.id" cssClass="form-control">
+                                                    <c:forEach items="${ list }" var="elem">
+                                                        <form:option value="${elem.id}">${elem.typeRes}</form:option>
+                                                    </c:forEach>
+                                                </form:select>
                                             </div>
                                         </div>
                                         <div class="line"></div><br>
@@ -291,7 +289,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-2" for="date">Date</label>
                                                 <div class="col-sm-10">
-                                                <input type="date" onload="getDate()" class="form-control" id="date" name="date">
+                                                <form:input path="dateRes" type="date" onload="getDate()" class="form-control" id="date" name="date"/>
                                                 </div>
                                             </div>
 
@@ -301,8 +299,7 @@
                                         <div class="line"></div><br>
                                         <div class="form-group row">
                                             <div class="col-sm-4 offset-sm-2">
-                                                <button type="submit" id="annuler"
-                                                        class="btn btn-secondary mb-2">Cancel</button>
+                                               <a href="dashbord" ><button type="submit" id="annuler" class="btn btn-secondary mb-2">Cancel</button></a>
                                                 <button type="submit" class="btn btn-primary mb-2">
                                                     Add</button>
                                             </div>
@@ -310,6 +307,7 @@
                                         </div>
                                         <div id="styleSelector"> </div>
                                 </div>
+                                </form:form>
                             </div>
                         </div>
                         <!-- Page-body end -->

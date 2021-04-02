@@ -8,13 +8,13 @@
       <jdbc-url>jdbc:mysql://localhost:3306/reservation</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="6f8d4a6a-86ee-45e0-9029-8391c903354a">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="f39be2ec-a1b7-4e9f-9900-6804372d0cdc">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>Hibernate
 
-C:/Users/Youcode/Desktop/GestionPlaces/ReservationPlaceYoucode/src/main/resources/hibernate.cfg.xml</remarks>
+C:/Users/yc/Desktop/projet/ReservationPlaceYoucode/src/main/resources/hibernate.cfg.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/reservation</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>

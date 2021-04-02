@@ -1,6 +1,5 @@
 $(function() {
 	'use strict';
-
 	
   $('.form-control').on('input', function() {
 	  var $field = $(this).closest('.form-group');

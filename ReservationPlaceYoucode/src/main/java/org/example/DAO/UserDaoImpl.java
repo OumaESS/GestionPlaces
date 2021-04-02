@@ -1,6 +1,6 @@
 package org.example.DAO;
 
-import org.example.HibernateUtil;
+import org.example.util.HibernateUtil;
 import org.example.Entity.UseradminEntity;
 import org.hibernate.Session;
 import org.springframework.stereotype.Component;
@@ -66,8 +66,8 @@ public class UserDaoImpl implements UserDAO{
             userEntity.setLastName(user.getLastName());
             userEntity.setEmail(user.getEmail());
             userEntity.setPassword(user.getPassword());
-            userEntity.setPhone(user.getPhone());
-            userEntity.setRole(user.getRole());
+//            userEntity.setPhone(user.getPhone());
+//            userEntity.setRole(user.getRole());
             System.out.println("User update");
         }else{
             System.out.println("User does not exist");

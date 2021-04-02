@@ -1,7 +1,7 @@
 package org.example.DAO;
 
 
-import org.example.HibernateUtil;
+import org.example.util.HibernateUtil;
 import org.example.Entity.AdminEntity;
 import org.hibernate.Session;
 import org.springframework.stereotype.Component;

@@ -2,7 +2,6 @@ package org.example.Entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
 
 @Entity
 @Table(name = "reservation")
@@ -35,6 +34,11 @@ public class ReservationEntity implements Serializable {
         this.typeRes = typeRes;
     }
 
+    public ReservationEntity(int id, boolean accpeted) {
+        this.idRes=id;
+        this.confirmation=accpeted;
+    }
+
 
     public int getId() {
         return idRes;
@@ -64,8 +68,9 @@ public class ReservationEntity implements Serializable {
         return confirmation;
     }
 
-    public void setConfirmation(boolean confirmation) {
-        this.confirmation = confirmation;
+    public boolean setConfirmation(boolean confirmation) {
+       return this.confirmation = confirmation;
+
     }
 
     public TypereservationEntity getTypeRes() {
