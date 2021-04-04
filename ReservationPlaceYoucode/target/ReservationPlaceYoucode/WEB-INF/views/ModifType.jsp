@@ -289,7 +289,7 @@
                                             <div class="line"></div><br>
                                             <div class="form-group row">
                                                 <div class="col-sm-4 offset-sm-2">
-                                                    <a href="TypeRes" class="btn btn-secondary mb-2">Cancel</a>
+                                                    <a href="ModifType" class="btn btn-secondary mb-2">Cancel</a>
                                                     <button type="submit" class="btn btn-primary mb-2">
                                                         Update</button>
                                                 </div>

@@ -291,7 +291,7 @@
                                                 <div class="col-sm-4 offset-sm-2">
                                                     <button type="submit" class="btn btn-primary mb-2">
                                                         Add</button>
-                                                    <a href="TypeRes" class="btn btn-secondary mb-2">Cancel</a>
+                                                    <a href="disAddRes" class="btn btn-secondary mb-2">Cancel</a>
                                                 </div>
                                                 <!-- Page-body end -->
                                             </div>

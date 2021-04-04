@@ -308,7 +308,7 @@
                                         <div class="line"></div><br>
                                         <div class="form-group row">
                                             <div class="col-sm-4 offset-sm-2">
-                                                <a href="dashbordadmin"><button type="submit" id="annuler" class="btn btn-secondary mb-2">Cancel</button></a>
+                                                <a href="EditPfAdmin" class="btn btn-secondary mb-2">Cancel</a>
                                                 <button type="submit" class="btn btn-primary mb-2">
                                                     Update</button>
                                             </div>
