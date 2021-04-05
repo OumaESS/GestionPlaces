@@ -159,9 +159,7 @@
                         <div class="">
                             <div class="main-menu-header" style="background-image: url("<c:url value="/resources/images/userbg.jpg"/>");">
 
-<%--                            <div class="user-details">--%>
-<%--&lt;%&ndash;                                <span id="more-details"><c:out value="${sessionScope.Fname}" /> <c:out value="${sessionScope.lasname}" /><i class="fa fa-caret-down"></i></span>&ndash;%&gt;--%>
-<%--                            </div>--%>
+
                         </div>
 
                         <div class="main-menu-content">
@@ -243,6 +241,7 @@
 <%--                        </div>--%>
 <%--                    </div>--%>
 <%--                </div>--%>
+
                 <!-- Page-header end -->
                 <div class="pcoded-inner-content">
                     <!-- Main-body start -->
