@@ -91,7 +91,7 @@
                     </a>
 
                     <a href="index.html">
-                        <img class="img-fluid" src="<c:url value="../resources/images/https://youcode.ma/images/logo.png"/>" alt="Theme-Logo" />
+                        <img class="img-fluid" src="<c:url value="/resources/images/https://youcode.ma/images/logo.png"/>" alt="Theme-Logo" />
                     </a>
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
@@ -134,11 +134,11 @@
                                         <i class="ti-user"></i> Edit profile
                                     </a>
                                 </li>
-                                <li class="waves-effect waves-light">
-                                    <a href="email-inbox.html">
-                                        <i class="ti-email"></i> My Messages
-                                    </a>
-                                </li>
+<%--                                <li class="waves-effect waves-light">--%>
+<%--&lt;%&ndash;                                    <a href="email-inbox.html">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                        <i class="ti-email"></i> My Messages&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                    </a>&ndash;%&gt;--%>
+<%--                                </li>--%>
                                 <li class="waves-effect waves-light">
                                     <a href="loginDirect">
                                         <i class="ti-layout-sidebar-left"></i> Logout
@@ -157,11 +157,9 @@
 <%--                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>--%>
                     <div class="pcoded-inner-navbar main-menu">
                         <div class="">
-                            <div class="main-menu-header" style="background-image: url("<c:url value="/resources/images/userbg.jpg"/>");">
+<%--                            <div class="main-menu-header" style="background-image: url("<c:url value="/resources/images/userbg.jpg"/>");">--%>
 
-<%--                            <div class="user-details">--%>
-<%--&lt;%&ndash;                                <span id="more-details"><c:out value="${sessionScope.Fname}" /> <c:out value="${sessionScope.lasname}" /><i class="fa fa-caret-down"></i></span>&ndash;%&gt;--%>
-<%--                            </div>--%>
+
                         </div>
 
                         <div class="main-menu-content">
@@ -221,6 +219,7 @@
                 </nav>
 
                 <div class="pcoded-content">
+
 <%--                    <!-- Page-header start -->--%>
 <%--                    <div class="page-header"  style="background-image: url("<c:url value="/resources/images/breadcrumbbg.jpg"/>");">--%>
 <%--                    <div class="page-block">--%>
@@ -243,6 +242,7 @@
 <%--                        </div>--%>
 <%--                    </div>--%>
 <%--                </div>--%>
+
                 <!-- Page-header end -->
                 <div class="pcoded-inner-content">
                     <!-- Main-body start -->

@@ -34,7 +34,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="mb-4">
-                            <h3>Sign In to <strong>Colorlib</strong></h3>
+                            <h3>Sign In to <strong>YouPlaces</strong></h3>
                             <p class="mb-4">Reserve your place to YouCode</p>
                         </div>
                         <form:form action="prosseForm" method="post" modelAttribute="userlogin">

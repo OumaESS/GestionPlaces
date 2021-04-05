@@ -132,11 +132,11 @@
                                           <i class="ti-user"></i> Edit profile
                                       </a>
                                   </li>
-                                  <li class="waves-effect waves-light">
-                                      <a href="email-inbox.html">
-                                          <i class="ti-email"></i> My Messages
-                                      </a>
-                                  </li>
+<%--                                  <li class="waves-effect waves-light">--%>
+<%--                                      <a href="email-inbox.html">--%>
+<%--                                          <i class="ti-email"></i> My Messages--%>
+<%--                                      </a>--%>
+<%--                                  </li>--%>
                                   <li class="waves-effect waves-light">
                                       <a href="loginDirect">
                                           <i class="ti-layout-sidebar-left"></i> Logout
@@ -174,7 +174,7 @@
                               </div>
                           </div>
 
-                          <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
+<%--                          <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>--%>
                           <ul class="pcoded-item pcoded-left-item">
                               <li class="active">
                                   <a href="dashbord" class="waves-effect waves-dark">

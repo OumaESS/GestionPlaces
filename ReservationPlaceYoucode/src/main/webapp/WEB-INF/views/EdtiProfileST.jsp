@@ -88,7 +88,7 @@
                     </a>
 
                     <a href="index.html">
-                        <img class="img-fluid" src="<c:url value="/resources/images/logo.jpg"/>" alt="Theme-Logo" />
+                        <img class="img-fluid" src="<c:url value="/resources/images/https://youcode.ma/images/logo.png"/>" alt="Theme-Logo" />
                     </a>
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
@@ -102,23 +102,23 @@
                             </div>
                         </li>
 
-                        <li style="margin-top: 1.5em;">
-                            <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light" >
-                                <i class="ti-fullscreen" ></i>
-                            </a>
-                        </li>
+<%--                        <li style="margin-top: 1.5em;">--%>
+<%--                            <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light" >--%>
+<%--                                <i class="ti-fullscreen" ></i>--%>
+<%--                            </a>--%>
+<%--                        </li>--%>
                     </ul>
                     <ul class="nav-right">
                         <li class="header-notification"  style="margin-top: 1.5em;" >
                             <a href="#!" class="waves-effect waves-light">
-                                <i class="ti-bell"></i>
-                                <span class="badge bg-c-red"></span>
+<%--                                <i class="ti-bell"></i>--%>
+<%--                                <span class="badge bg-c-red"></span>--%>
                             </a>
                             <ul class="show-notification">
-                                <li>
-                                    <h6>Notifications</h6>
-                                    <label class="label label-danger">New</label>
-                                </li>
+<%--                                <li>--%>
+<%--                                    <h6>Notifications</h6>--%>
+<%--                                    <label class="label label-danger">New</label>--%>
+<%--                                </li>--%>
                             </ul>
                         <li class="user-profile header-notification">
                             <a href="#!" class="waves-effect waves-light">
@@ -128,14 +128,14 @@
                             <ul class="show-notification profile-notification">
                                 <li class="waves-effect waves-light">
                                     <a href="EditPfS">
-                                        <i class="ti-user"></i> Editer profile
+                                        <i class="ti-user"></i> Edit profile
                                     </a>
                                 </li>
-                                <li class="waves-effect waves-light">
-                                    <a href="email-inbox.html">
-                                        <i class="ti-email"></i> My Messages
-                                    </a>
-                                </li>
+<%--                                <li class="waves-effect waves-light">--%>
+<%--&lt;%&ndash;                                    <a href="email-inbox.html">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                        <i class="ti-email"></i> My Messages&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                    </a>&ndash;%&gt;--%>
+<%--                                </li>--%>
                                 <li class="waves-effect waves-light">
                                     <a href="loginDirect">
                                         <i class="ti-layout-sidebar-left"></i> Logout
@@ -151,7 +151,7 @@
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
                 <nav class="pcoded-navbar">
-                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+<%--                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>--%>
                     <div class="pcoded-inner-navbar main-menu">
                         <div class="">
                             <div class="main-menu-header" style="background-image: url("<c:url value="/resources/images/userbg.jpg"/>");">
@@ -165,7 +165,7 @@
                             <ul>
                                 <li class="more-details">
                                     <a href="EditPfS">
-                                        <i class="ti-user"></i> Editer profile
+                                        <i class="ti-user"></i> Edit profile
                                     </a>
                                           <a href="loginDirect">  <i class="ti-layout-sidebar-left"></i>Logout</a>
                                 </li>
@@ -173,7 +173,7 @@
                         </div>
                     </div>
 
-                    <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
+<%--                    <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>--%>
                     <ul class="pcoded-item pcoded-left-item">
                         <li class="active">
                             <a href="dashbordadmin" class="waves-effect waves-dark">
@@ -235,27 +235,29 @@
 
                 <div class="pcoded-content">
                     <!-- Page-header start -->
-                    <div class="page-header"  style="background-image: url("<c:url value="/resources/images/breadcrumbbg.jpg"/>");">
-                    <div class="page-block">
-                        <div class="row align-items-center">
-                            <div class="col-md-8">
-                                <div class="page-header-title">
-                                    <h5 class="m-b-10">Dashboard</h5>
-                                    <p class="m-b-0">Welcome to Youcode Reservation</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <ul class="breadcrumb-title">
-                                    <li class="breadcrumb-item">
-                                        <a href="dashbord"> <i class="fa fa-home"></i> </a>
-                                    </li>
-                                    <li class="breadcrumb-item"><a href="dashbord">Dashboard</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<%--                    <div class="page-header"  style="background-image: url("<c:url value="/resources/images/breadcrumbbg.jpg"/>");">--%>
+<%--                    <div class="page-block">--%>
+<%--                        <div class="row align-items-center">--%>
+<%--                            <div class="col-md-8">--%>
+<%--                                <div class="page-header-title">--%>
+<%--                                    <h5 class="m-b-10">Dashboard</h5>--%>
+<%--                                    <p class="m-b-0">Welcome to Youcode Reservation</p>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            <div class="col-md-4">--%>
+<%--                                <ul class="breadcrumb-title">--%>
+<%--                                    <li class="breadcrumb-item">--%>
+<%--                                        <a href="dashbord"> <i class="fa fa-home"></i> </a>--%>
+<%--                                    </li>--%>
+<%--                                    <li class="breadcrumb-item"><a href="dashbord">Dashboard</a>--%>
+<%--                                    </li>--%>
+<%--                                </ul>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+
+
                 <!-- Page-header end -->
                 <div class="pcoded-inner-content">
                     <!-- Main-body start -->
