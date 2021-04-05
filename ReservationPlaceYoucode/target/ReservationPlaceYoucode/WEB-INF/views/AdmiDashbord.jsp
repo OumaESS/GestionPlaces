@@ -131,7 +131,7 @@
                             <ul class="show-notification profile-notification">
                                 <li class="waves-effect waves-light">
                                     <a href="EditPfAdmin">
-                                        <i class="ti-user"></i> Editer profile
+                                        <i class="ti-user"></i> Edit profile
                                     </a>
                                 </li>
                                 <li class="waves-effect waves-light">
@@ -154,7 +154,7 @@
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
                 <nav class="pcoded-navbar">
-                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+<%--                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>--%>
                     <div class="pcoded-inner-navbar main-menu">
                         <div class="">
                             <div class="main-menu-header" style="background-image: url("<c:url value="/resources/images/userbg.jpg"/>");">
