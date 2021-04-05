@@ -88,8 +88,8 @@
                           <i class="ti-menu"></i>
                       </a>
 
-                      <a href="index.html">
-                          <img class="img-fluid" src="<c:url value="/resources/images/logo.jpg"/>" alt="Theme-Logo" />
+                      <a href="">
+                          <img class="img-fluid" src="<c:url value="/resources/images/logoyoucode.jpg"/>" alt="Theme-Logo" />
                       </a>
                       <a class="mobile-options waves-effect waves-light">
                           <i class="ti-more"></i>
@@ -239,13 +239,6 @@
                                       <h5>My Reservation</h5>
 
                                       <div class="card-header-right">
-                                          <ul class="list-unstyled card-option">
-                                              <li><i class="fa fa fa-wrench open-card-option"></i></li>
-                                              <li><i class="fa fa-window-maximize full-card"></i></li>
-                                              <li><i class="fa fa-minus minimize-card"></i></li>
-                                              <li><i class="fa fa-refresh reload-card"></i></li>
-                                              <li><i class="fa fa-trash close-card"></i></li>
-                                          </ul>
                                       </div>
                                   </div>
                                   <div class="card-block table-border-style">

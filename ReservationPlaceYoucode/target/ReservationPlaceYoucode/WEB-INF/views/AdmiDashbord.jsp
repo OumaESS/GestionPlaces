@@ -90,8 +90,8 @@
                         <i class="ti-menu"></i>
                     </a>
 
-                    <a href="index.html">
-                        <img class="img-fluid" src="<c:url value="/resources/images/https://youcode.ma/images/logo.png"/>" alt="Theme-Logo" />
+                    <a href="">
+                        <img class="img-fluid" src="<c:url value="/resources/images/logoyoucode.jpg"/>" alt="Theme-Logo" />
                     </a>
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
@@ -157,7 +157,7 @@
 <%--                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>--%>
                     <div class="pcoded-inner-navbar main-menu">
                         <div class="">
-<%--                            <div class="main-menu-header" style="background-image: url("<c:url value="/resources/images/userbg.jpg"/>");">--%>
+                            <div class="main-menu-header" >
 
 
                         </div>
@@ -252,13 +252,7 @@
                                 <h5>type of reservation</h5>
 
                                 <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
-                                        <li><i class="fa fa-window-maximize full-card"></i></li>
-                                        <li><i class="fa fa-minus minimize-card"></i></li>
-                                        <li><i class="fa fa-refresh reload-card"></i></li>
-                                        <li><i class="fa fa-trash close-card"></i></li>
-                                    </ul>
+
                                 </div>
                             </div>
                             <div class="card-block table-border-style">

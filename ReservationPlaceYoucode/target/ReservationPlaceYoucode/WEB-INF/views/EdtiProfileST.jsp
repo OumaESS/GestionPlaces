@@ -87,8 +87,8 @@
                         <i class="ti-menu"></i>
                     </a>
 
-                    <a href="index.html">
-                        <img class="img-fluid" src="<c:url value="/resources/images/https://youcode.ma/images/logo.png"/>" alt="Theme-Logo" />
+                    <a href="">
+                        <img class="img-fluid" src="<c:url value="/resources/images/logoyoucode.jpg"/>" alt="Theme-Logo" />
                     </a>
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
