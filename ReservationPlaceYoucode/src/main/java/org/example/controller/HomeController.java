@@ -1,6 +1,5 @@
 package org.example.controller;
 
-import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,17 +30,11 @@ public class HomeController {
 @Autowired
 private TypeResService typeResService;
 
-	private UseradminEntity user;
-
-
-//	@RequestMapping(value="/")
-//	public ModelAndView test(HttpServletResponse response) throws IOException{
-//		return new ModelAndView("login");
-//	}
+	private UsersEntity user;
 
 	//display login
 	@RequestMapping(value="/")
-	public String DisplayLogin(@ModelAttribute("userlogin") UseradminEntity useradminEntity)
+	public String DisplayLogin(@ModelAttribute("userlogin") UsersEntity usersEntity)
 	{
 		return "login";
 	}
@@ -49,14 +42,14 @@ private TypeResService typeResService;
 
 	// Authentification
 	@RequestMapping(value="/prosseForm")
-	public String ProsseLogin(@ModelAttribute("userlogin") UseradminEntity useradminEntity, HttpSession session)
+	public String ProsseLogin(@ModelAttribute("userlogin") UsersEntity usersEntity, HttpSession session)
 	{
 
 		LoginRepostory loginRepostory=new LoginRepostory();
 
-		user=  loginRepostory.getUserByEmailPassword(useradminEntity.getEmail(),useradminEntity.getPassword());
+		user=  loginRepostory.getUserByEmailPassword(usersEntity.getEmail(), usersEntity.getPassword());
 		AuthenticatedUser.user = user;
-		if (user != null && user.getPassword().equals(useradminEntity.getPassword()) && user.isAccepted()==true) {
+		if (user != null && user.getPassword().equals(usersEntity.getPassword()) && user.isAccepted()==true) {
 			session.setAttribute("id",AuthenticatedUser.user.getId());
 			session.setAttribute("Fname",AuthenticatedUser.user.getFirstName());
 			session.setAttribute("lasname",AuthenticatedUser.user.getLastName());
@@ -70,10 +63,7 @@ private TypeResService typeResService;
 	}
 
 
-	//Set User ver dashbord
-
-
-
+	//get liste Type Reservation in input select
 
 	@RequestMapping(value = "Res")
 	public String DisplayAddRes(@ModelAttribute("res") ReservationEntity reservationEntity,Model model)
@@ -112,7 +102,7 @@ private TypeResService typeResService;
 			studentEntity.setRole(roleEntity);
 			userService.addUser(studentEntity);
 			System.out.println(studentEntity.getFirstName());
-			return "home";
+			return "redirect:/loginDirect";
 		}else{
 			return "login";
 		}

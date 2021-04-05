@@ -1,9 +1,6 @@
 package org.example.controller;
 
 import org.example.Entity.TypereservationEntity;
-import org.example.Entity.UseradminEntity;
-import org.example.Global.AuthenticatedUser;
-import org.example.Repostory.UserRepostory;
 import org.example.service.TypeResService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

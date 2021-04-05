@@ -57,8 +57,8 @@ public static void main(final String[] args) throws Exception {
 //
 //        //role
 //
-//    RoleDaoImpl roleDAO=new RoleDaoImpl();
-//    roleDAO.addRole(new RoleEntity("nnn"));
+    RoleDaoImpl roleDAO=new RoleDaoImpl();
+    roleDAO.addRole(new RoleEntity("admin"));
 
     //Test Session
 
@@ -66,7 +66,7 @@ public static void main(final String[] args) throws Exception {
 //    session1.beginTransaction();
 //    RoleEntity roleEntity1=session.get(RoleEntity.class,1);
 //    System.out.println(roleEntity1);
-//    UseradminEntity useradminEntity=new UseradminEntity("zahid","fatima","zahidmm12312@gmail.com","zahid123",12345,roleEntity1);
+//    UsersEntity useradminEntity=new UsersEntity("zahid","fatima","zahidmm12312@gmail.com","zahid123",12345,roleEntity1);
 //    session1.persist(useradminEntity);
 //    session1.getTransaction().commit();
 //    System.out.println("add useradmin");
@@ -87,14 +87,14 @@ public static void main(final String[] args) throws Exception {
     //test Login
 
 //    LoginRepostory loginRepostory=new LoginRepostory();
-//    UseradminEntity useradminEntity=loginRepostory.getUserByEmailPassword("")
+//    UsersEntity useradminEntity=loginRepostory.getUserByEmailPassword("")
 
 
 
 //Test Reservation
 
 //    UserDaoImpl userDao=new UserDaoImpl();
-//    UseradminEntity useradminEntity=userDao.getUserById(1);
+//    UsersEntity useradminEntity=userDao.getUserById(1);
 //
 //    ReservationDaoImpl reservationDao=new ReservationDaoImpl();
 //
@@ -108,7 +108,7 @@ public static void main(final String[] args) throws Exception {
 //    UserDaoImpl userDao=new UserDaoImpl();
 //    RoleDaoImpl roleDao=new RoleDaoImpl();
 //    RoleEntity roleEntity=roleDao.getRoleById(1);
-//    UseradminEntity user=new UseradminEntity("malak","errabib","malkcca@gmail.com","malk123",12344,roleEntity);
+//    UsersEntity user=new UsersEntity("malak","errabib","malkcca@gmail.com","malk123",12344,roleEntity);
 //    userService.addUser(user);
 
 //    userDao.addUser(user);

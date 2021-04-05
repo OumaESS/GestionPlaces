@@ -1,6 +1,6 @@
 package org.example.Repostory;
 
-import org.example.Entity.UseradminEntity;
+import org.example.Entity.UsersEntity;
 import org.example.util.HibernateUtil;
 import org.hibernate.Session;
 
@@ -9,21 +9,21 @@ import java.util.List;
 public class UserRepostory {
 
     Session session;
-    public List<UseradminEntity> getAllStudents() {
+    public List<UsersEntity> getAllStudents() {
         session = HibernateUtil.getSession();
         session.beginTransaction();
-        List<UseradminEntity> userList = session.createQuery("From UseradminEntity  where role.roleName='student'").list();
+        List<UsersEntity> userList = session.createQuery("From UsersEntity  where role.roleName='student'").list();
         session.getTransaction().commit();
         return userList;
     }
 
 
 
-    public UseradminEntity updateUserAccpect(UseradminEntity user) {
-        UseradminEntity userEntity;
+    public UsersEntity updateUserAccpect(UsersEntity user) {
+        UsersEntity userEntity;
         session = HibernateUtil.getSession();
         session.beginTransaction();
-        userEntity = session.find(UseradminEntity.class, user.getId());
+        userEntity = session.find(UsersEntity.class, user.getId());
         if (userEntity != null){
             userEntity.setAccepted(user.isAccepted());
             System.out.println("User update");

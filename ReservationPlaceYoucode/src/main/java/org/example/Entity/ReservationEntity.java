@@ -10,7 +10,7 @@ public class ReservationEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRes;
     @OneToOne
-    private UseradminEntity user;
+    private UsersEntity user;
     @Column(nullable = false)
     private String dateRes;
     private boolean confirmation;
@@ -20,7 +20,7 @@ public class ReservationEntity implements Serializable {
     public ReservationEntity() {
     }
 
-    public ReservationEntity(int id, UseradminEntity user, String dateRes, boolean confirmation, TypereservationEntity typeRes) {
+    public ReservationEntity(int id, UsersEntity user, String dateRes, boolean confirmation, TypereservationEntity typeRes) {
         this.idRes = id;
         this.user = user;
         this.dateRes = dateRes;
@@ -28,7 +28,7 @@ public class ReservationEntity implements Serializable {
         this.typeRes = typeRes;
     }
 
-    public ReservationEntity(UseradminEntity user, String dateRes, TypereservationEntity typeRes) {
+    public ReservationEntity(UsersEntity user, String dateRes, TypereservationEntity typeRes) {
         this.user = user;
         this.dateRes = dateRes;
         this.typeRes = typeRes;
@@ -48,11 +48,11 @@ public class ReservationEntity implements Serializable {
         this.idRes = id;
     }
 
-    public UseradminEntity getUser() {
+    public UsersEntity getUser() {
         return user;
     }
 
-    public void setUser(UseradminEntity user) {
+    public void setUser(UsersEntity user) {
         this.user = user;
     }
 

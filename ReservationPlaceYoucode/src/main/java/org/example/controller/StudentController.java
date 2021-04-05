@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -64,11 +62,11 @@ public class StudentController {
     }
 
     @RequestMapping(value = "EditPfS")
-    public String Edit(@ModelAttribute("EditPfS") UseradminEntity useradminEntity,Model model,HttpSession session)
+    public String Edit(@ModelAttribute("EditPfS") UsersEntity usersEntity, Model model, HttpSession session)
     {
         Object idUser=session.getAttribute("id");
-        useradminEntity=userService.getUserById((Integer) idUser);
-        model.addAttribute("user",useradminEntity);
+        usersEntity =userService.getUserById((Integer) idUser);
+        model.addAttribute("user", usersEntity);
         return "EdtiProfileST";
     }
 
@@ -83,11 +81,11 @@ public class StudentController {
         String email=req.getParameter("email");
         String password=req.getParameter("password");
 
-        UseradminEntity useradminEntity=new UseradminEntity(id,FName,LName,email,password);
+        UsersEntity usersEntity =new UsersEntity(id,FName,LName,email,password);
 
-        userService.updateUser(useradminEntity);
+        userService.updateUser(usersEntity);
 
-        AuthenticatedUser.user=useradminEntity;
+        AuthenticatedUser.user= usersEntity;
 
         session.setAttribute("Fname",AuthenticatedUser.user.getFirstName());
         session.setAttribute("lasname",AuthenticatedUser.user.getLastName());

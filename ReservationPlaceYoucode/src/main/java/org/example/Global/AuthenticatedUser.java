@@ -1,7 +1,7 @@
 package org.example.Global;
 
-import org.example.Entity.UseradminEntity;
+import org.example.Entity.UsersEntity;
 
 public class AuthenticatedUser {
-    public static UseradminEntity user;
+    public static UsersEntity user;
 }

@@ -1,7 +1,7 @@
 package org.example.service;
 
 import org.example.DAO.UserDAO;
-import org.example.Entity.UseradminEntity;
+import org.example.Entity.UsersEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     @Transactional
-    public void addUser(UseradminEntity user) {
+    public void addUser(UsersEntity user) {
 
         userDAO.addUser(user);
 
@@ -27,13 +27,13 @@ public class UserServiceImpl implements UserService{
 
     @Override
     @Transactional
-    public UseradminEntity getUserById(int id) {
+    public UsersEntity getUserById(int id) {
 
       return userDAO.getUserById(id);
     }
 
     @Override
-    public List<UseradminEntity> getAllUsers() {
+    public List<UsersEntity> getAllUsers() {
 
         return  userDAO.getAllUsers();
     }
@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public UseradminEntity updateUser(UseradminEntity user) {
+    public UsersEntity updateUser(UsersEntity user) {
 
        return  userDAO.updateUser(user);
     }

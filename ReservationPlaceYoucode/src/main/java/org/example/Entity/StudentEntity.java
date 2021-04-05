@@ -2,12 +2,11 @@ package org.example.Entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
 
 @Entity
 //@PrimaryKeyJoinColumn(name = "studentId")
 @Table(name = "student")
-public class StudentEntity extends UseradminEntity implements Serializable {
+public class StudentEntity extends UsersEntity implements Serializable {
 
     @Column(nullable = false)
     private int reservationMax;

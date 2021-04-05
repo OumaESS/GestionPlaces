@@ -20,7 +20,7 @@
         <!-- Set the current session context -->
         <property name="current_session_context_class">thread</property>
         <mapping class="org.example.Entity.RoleEntity"/>
-        <mapping class="org.example.Entity.UseradminEntity"/>
+        <mapping class="org.example.Entity.UsersEntity"/>
         <mapping class="org.example.Entity.TypereservationEntity"/>
 
         <mapping class="org.example.Entity.StudentEntity"/>

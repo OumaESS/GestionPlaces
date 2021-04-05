@@ -1,8 +1,7 @@
 package org.example.controller;
 
 import org.example.Entity.ReservationEntity;
-import org.example.Entity.StudentEntity;
-import org.example.Entity.UseradminEntity;
+import org.example.Entity.UsersEntity;
 import org.example.Global.AuthenticatedUser;
 import org.example.Repostory.ReservationRepostory;
 import org.example.Repostory.UserRepostory;
@@ -31,14 +30,15 @@ public class AdminController {
 
 
 
+    //Afficher la listes des users in dashbord admin
     @RequestMapping(value = "dashbordadmin")
-    public String rege(@ModelAttribute("dashbord")UseradminEntity useradminEntity, Model model,HttpSession session){
+    public String rege(@ModelAttribute("dashbord") UsersEntity usersEntity, Model model, HttpSession session){
 
         if(session.getAttribute("id")!=null)
         {
             UserRepostory userRepostory=new UserRepostory();
 
-            List<UseradminEntity> users = userRepostory.getAllStudents();
+            List<UsersEntity> users = userRepostory.getAllStudents();
 
             model.addAttribute("users",users);
             System.out.println(users);
@@ -54,6 +54,7 @@ public class AdminController {
     }
 
 
+    //Confermation Compte Student
     @RequestMapping(value = "confiEmail")
     public String ConfirmEmail(HttpServletRequest req)
     {
@@ -62,9 +63,9 @@ public class AdminController {
 
       boolean accpeted=AuthenticatedUser.user.setAccepted(true);
 
-        UseradminEntity useradminEntity=new UseradminEntity(id,accpeted);
+        UsersEntity usersEntity =new UsersEntity(id,accpeted);
 
-        userRepostory.updateUserAccpect(useradminEntity);
+        userRepostory.updateUserAccpect(usersEntity);
 
 
 
@@ -73,18 +74,26 @@ public class AdminController {
     }
 
 
+    //Refuser le compte de student
     @RequestMapping(value = "deleteEmail")
     public String deletemEmail(HttpServletRequest req)
     {
 
+        UserRepostory userRepostory=new UserRepostory();
         int id= Integer.parseInt(req.getParameter("id"));
 
-        userService.deleteUser(id);
+        boolean accpeted=AuthenticatedUser.user.setAccepted(false);
+
+        UsersEntity usersEntity =new UsersEntity(id,accpeted);
+
+        userRepostory.updateUserAccpect(usersEntity);
 
         return "redirect:/dashbordadmin";
     }
 
 
+
+    //Afficher les Reservation des apprenants dans le dashbord admin
 
     @RequestMapping(value = "ShowRes")
     public String ShoweRes(@ModelAttribute("dashbord")ReservationEntity reservationEntity, Model model){
@@ -101,6 +110,7 @@ public class AdminController {
 
 
 
+    //Confermation Reservation
     @RequestMapping(value = "confiRes")
     public String ConfirRes(HttpServletRequest req)
     {
@@ -121,28 +131,37 @@ public class AdminController {
     }
 
 
+    //Refuser les reservations des apprenants
     @RequestMapping(value = "deleteRes")
     public String deleteRes(HttpServletRequest req)
     {
 
+        ReservationEntity res=new ReservationEntity();
+        ReservationRepostory resevationRepostory=new ReservationRepostory();
         int id= Integer.parseInt(req.getParameter("id"));
 
-        reservationService.deleteRes(id);
+        boolean accpeted=res.setConfirmation(true);
+
+        ReservationEntity reservationEntity=new ReservationEntity(id,accpeted);
+
+        resevationRepostory.Confirm(reservationEntity);
 
         return "redirect:/ShowRes";
     }
 
 
+    //Display Profil admin
     @RequestMapping(value = "EditPfAdmin")
-    public String Edit(@ModelAttribute("EditPfS") UseradminEntity useradminEntity,Model model,HttpSession session)
+    public String Edit(@ModelAttribute("EditPfS") UsersEntity usersEntity, Model model, HttpSession session)
     {
         Object idUser=session.getAttribute("id");
-        useradminEntity=userService.getUserById((Integer) idUser);
-        model.addAttribute("user",useradminEntity);
+        usersEntity =userService.getUserById((Integer) idUser);
+        model.addAttribute("user", usersEntity);
         return "EditePrAdmin";
     }
 
 
+    // Modif Profile
     @RequestMapping(value = "ProsseModifPrAdmin")
     public String ModifProfile(HttpServletRequest req, HttpSession session)
     {
@@ -153,11 +172,11 @@ public class AdminController {
         String email=req.getParameter("email");
         String password=req.getParameter("password");
 
-        UseradminEntity useradminEntity=new UseradminEntity(id,FName,LName,email,password);
+        UsersEntity usersEntity =new UsersEntity(id,FName,LName,email,password);
 
-        userService.updateUser(useradminEntity);
+        userService.updateUser(usersEntity);
 
-        AuthenticatedUser.user=useradminEntity;
+        AuthenticatedUser.user= usersEntity;
 
         session.setAttribute("Fname",AuthenticatedUser.user.getFirstName());
         session.setAttribute("lasname",AuthenticatedUser.user.getLastName());

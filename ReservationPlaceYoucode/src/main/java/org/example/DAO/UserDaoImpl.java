@@ -1,7 +1,7 @@
 package org.example.DAO;
 
+import org.example.Entity.UsersEntity;
 import org.example.util.HibernateUtil;
-import org.example.Entity.UseradminEntity;
 import org.hibernate.Session;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -13,7 +13,7 @@ import java.util.List;
 public class UserDaoImpl implements UserDAO{
     Session session;
     @Override
-    public void addUser(UseradminEntity user) {
+    public void addUser(UsersEntity user) {
         session = HibernateUtil.getSession();
         session.beginTransaction();
         session.save(user);
@@ -22,29 +22,29 @@ public class UserDaoImpl implements UserDAO{
     }
 
     @Override
-    public UseradminEntity getUserById(int id) {
+    public UsersEntity getUserById(int id) {
         session = HibernateUtil.getSession();
         session.beginTransaction();
-        UseradminEntity user = session.find(UseradminEntity.class, id);
+        UsersEntity user = session.find(UsersEntity.class, id);
         session.getTransaction().commit();
         return user;
     }
 
     @Override
-    public List<UseradminEntity> getAllUsers() {
+    public List<UsersEntity> getAllUsers() {
         session = HibernateUtil.getSession();
         session.beginTransaction();
-        List<UseradminEntity> userList = session.createQuery("From UseradminEntity ").list();
+        List<UsersEntity> userList = session.createQuery("From UsersEntity ").list();
         session.getTransaction().commit();
         return userList;
     }
 
     @Override
     public void deleteUser(int id) {
-        UseradminEntity user;
+        UsersEntity user;
         session = HibernateUtil.getSession();
         session.beginTransaction();
-        user = session.find(UseradminEntity.class, id);
+        user = session.find(UsersEntity.class, id);
         if (user != null){
             session.delete(user);
             session.flush();
@@ -56,11 +56,11 @@ public class UserDaoImpl implements UserDAO{
     }
 
     @Override
-    public UseradminEntity updateUser(UseradminEntity user) {
-        UseradminEntity userEntity;
+    public UsersEntity updateUser(UsersEntity user) {
+        UsersEntity userEntity;
         session = HibernateUtil.getSession();
         session.beginTransaction();
-        userEntity = session.find(UseradminEntity.class, user.getId());
+        userEntity = session.find(UsersEntity.class, user.getId());
         if (userEntity != null){
             userEntity.setFirstName(user.getFirstName());
             userEntity.setLastName(user.getLastName());
