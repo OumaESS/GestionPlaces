@@ -45,11 +45,13 @@ private TypeResService typeResService;
 	public String ProsseLogin(@ModelAttribute("userlogin") UsersEntity usersEntity, HttpSession session)
 	{
 
+		//instantiation loginReposotory
 		LoginRepostory loginRepostory=new LoginRepostory();
 
-		user=  loginRepostory.getUserByEmailPassword(usersEntity.getEmail(), usersEntity.getPassword());
+		//une fois on fais l'instontiation on a le droit d'appeler lett les méthode de classe
+		user=  loginRepostory.getUserByEmailPassword(usersEntity.getEmail(), usersEntity.getPassword()); //si il trouve les mêmes email et psw il va retourné USER
 		AuthenticatedUser.user = user;
-		if (user != null && user.getPassword().equals(usersEntity.getPassword()) && user.isAccepted()==true) {
+		if (user != null && user.isAccepted()==true) {
 			session.setAttribute("id",AuthenticatedUser.user.getId());
 			session.setAttribute("Fname",AuthenticatedUser.user.getFirstName());
 			session.setAttribute("lasname",AuthenticatedUser.user.getLastName());

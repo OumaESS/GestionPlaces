@@ -16,7 +16,7 @@ public class LoginRepostory {
         query.setParameter("email", email);
         query.setParameter("password",password);
         try {
-            UsersEntity userEntity = (UsersEntity) query.getSingleResult();
+            UsersEntity userEntity = (UsersEntity) query.getSingleResult(); //execute query
             return userEntity;
         }
         catch (Exception e){

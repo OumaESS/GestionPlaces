@@ -150,7 +150,7 @@ public class AdminController {
     }
 
 
-    //Display Profil admin
+    //Display Profil admin formulair
     @RequestMapping(value = "EditPfAdmin")
     public String Edit(@ModelAttribute("EditPfS") UsersEntity usersEntity, Model model, HttpSession session)
     {
@@ -172,6 +172,7 @@ public class AdminController {
         String email=req.getParameter("email");
         String password=req.getParameter("password");
 
+        //constructeur d'initialisation contien les paramètres
         UsersEntity usersEntity =new UsersEntity(id,FName,LName,email,password);
 
         userService.updateUser(usersEntity);

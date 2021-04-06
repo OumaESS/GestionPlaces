@@ -13,13 +13,17 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+//il scan le code ou il est dans un package(compannentscan)
 @Configuration
 @ComponentScan(basePackages="org.example")
 @EnableWebMvc
 public class MvcConfiguration extends WebMvcConfigurerAdapter{
 
+	//Bean annotation de config
 	@Bean
 	public ViewResolver getViewResolver(){
+		//instonciation
+		//get view .jsp
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
@@ -28,6 +32,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 
 
 	@Override
+	//chemain du resource
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}

@@ -84,7 +84,7 @@
           <nav class="navbar header-navbar pcoded-header">
               <div class="navbar-wrapper">
                   <div class="navbar-logo">
-                      <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                      <a class="mobile-menu waves-effect waves-light ml-2" id="mobile-collapse" href="#!">
                           <i class="ti-menu"></i>
                       </a>
 
@@ -103,23 +103,14 @@
                               </div>
                           </li>
 
-<%--                          <li style="margin-top: 1.5em;">--%>
-<%--&lt;%&ndash;                              <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light" >&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                  <i class="ti-fullscreen" ></i>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                              </a>&ndash;%&gt;--%>
-<%--                          </li>--%>
                       </ul>
                       <ul class="nav-right">
                           <li class="header-notification"  style="margin-top: 1.5em;" >
                               <a href="#!" class="waves-effect waves-light">
-<%--                                  <i class="ti-bell"></i>--%>
-<%--                                  <span class="badge bg-c-red"></span>--%>
+
                               </a>
                               <ul class="show-notification">
-<%--                                  <li>--%>
-<%--                                      <h6>Notifications</h6>--%>
-<%--                                      <label class="label label-danger">New</label>--%>
-<%--                                  </li>--%>
+
                               </ul>
                           <li class="user-profile header-notification">
                               <a href="#!" class="waves-effect waves-light">
@@ -132,11 +123,7 @@
                                           <i class="ti-user"></i> Edit profile
                                       </a>
                                   </li>
-<%--                                  <li class="waves-effect waves-light">--%>
-<%--                                      <a href="email-inbox.html">--%>
-<%--                                          <i class="ti-email"></i> My Messages--%>
-<%--                                      </a>--%>
-<%--                                  </li>--%>
+
                                   <li class="waves-effect waves-light">
                                       <a href="loginDirect">
                                           <i class="ti-layout-sidebar-left"></i> Logout
@@ -152,7 +139,6 @@
           <div class="pcoded-main-container">
               <div class="pcoded-wrapper">
                   <nav class="pcoded-navbar">
-<%--                      <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>--%>
                       <div class="pcoded-inner-navbar main-menu">
                           <div class="">
                               <div class="main-menu-header" style="background-image: url("<c:url value="/resources/images/userbg.jpg"/>");">
@@ -168,13 +154,11 @@
                                           <a href="EditPfS">
                                               <i class="ti-user"></i> Edit profile
                                           </a>
-<%--                                              <a href="loginDirect">    <i class="ti-layout-sidebar-left"></i>Logout</a>--%>
                                       </li>
                                   </ul>
                               </div>
                           </div>
 
-<%--                          <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>--%>
                           <ul class="pcoded-item pcoded-left-item">
                               <li class="active">
                                   <a href="dashbord" class="waves-effect waves-dark">
@@ -183,9 +167,6 @@
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
-
-
-
 
                           </ul>
 
@@ -206,28 +187,6 @@
                   </nav>
 
                   <div class="pcoded-content">
-                      <!-- Page-header start -->
-<%--                      <div class="page-header"  style="background-image: url("<c:url value="/resources/images/breadcrumbbg.jpg"/>");">--%>
-<%--                          <div class="page-block">--%>
-<%--                              <div class="row align-items-center">--%>
-<%--                                  <div class="col-md-8">--%>
-<%--                                      <div class="page-header-title">--%>
-<%--                                          <h5 class="m-b-10">Dashboard</h5>--%>
-<%--                                          <p class="m-b-0">Welcome to Youcode Reservation</p>--%>
-<%--                                      </div>--%>
-<%--                                  </div>--%>
-<%--                                  <div class="col-md-4">--%>
-<%--                                      <ul class="breadcrumb-title">--%>
-<%--                                          <li class="breadcrumb-item">--%>
-<%--                                              <a href="dashbord"> <i class="fa fa-home"></i> </a>--%>
-<%--                                          </li>--%>
-<%--                                          <li class="breadcrumb-item"><a href="dashbord">Dashboard</a>--%>
-<%--                                          </li>--%>
-<%--                                      </ul>--%>
-<%--                                  </div>--%>
-<%--                              </div>--%>
-<%--                          </div>--%>
-<%--                      </div>--%>
 
 
                       <!-- Page-header end -->
