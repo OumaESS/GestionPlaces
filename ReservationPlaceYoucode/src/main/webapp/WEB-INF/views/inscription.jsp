@@ -9,6 +9,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--tag de spring MVC--%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
@@ -26,6 +27,9 @@
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Sign up</h2>
+
+<%--                    post envoi en moyen sécurisé--%>
+<%--                    action dans la méthode--%>
                     <form:form method="post" modelAttribute="student" action="registerForm">
                         <div class="form-group">
                             <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>

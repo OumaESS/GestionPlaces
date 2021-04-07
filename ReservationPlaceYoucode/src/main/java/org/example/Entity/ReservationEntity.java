@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "reservation")
-public class ReservationEntity implements Serializable {
+public class ReservationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRes;
@@ -14,7 +14,7 @@ public class ReservationEntity implements Serializable {
     @Column(nullable = false)
     private String dateRes;
     private boolean confirmation;
-    @OneToOne
+    @OneToOne //for&key
     private TypereservationEntity typeRes;
 
     public ReservationEntity() {

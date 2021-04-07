@@ -15,6 +15,7 @@ import java.util.List;
 @Controller
 public class TypeResController {
 
+    //CRUD de reserve par admine
 
     @Autowired
     private TypeResService typeResService;
@@ -33,6 +34,7 @@ public class TypeResController {
     }
 
 
+    //modification de type reserv avec value
     @RequestMapping(value = "ModifType")
     public String DisplayModifType(@ModelAttribute("typeRes")TypereservationEntity typereservationEntity, HttpServletRequest req,Model model,HttpSession session){
 

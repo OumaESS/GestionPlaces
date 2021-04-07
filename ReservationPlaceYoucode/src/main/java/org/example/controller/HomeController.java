@@ -87,24 +87,27 @@ private TypeResService typeResService;
 	//Display Regestre
 
 	@RequestMapping(value="regestre")
+	//on déclare mode attribute on le donne un nom
 	public String DisplayRegestre(@ModelAttribute("student") StudentEntity studentEntity)
 	{
-		return "inscription";
+		return "inscription"; //fichier jsp
 	}
 
 
 
     //Inscription
+
 	@RequestMapping(value = "registerForm", method = RequestMethod.POST)
+	//http request pour la confirmation du psw
 	public String register(HttpServletRequest request, @ModelAttribute("student") StudentEntity studentEntity){
-		String Cpass = request.getParameter("re_pass");
+		String Cpass = request.getParameter("re_pass"); //re_pass nom d'inpote
 		if (Cpass.equals(studentEntity.getPassword())){
 			studentEntity.setReservationMax(3);
 			RoleEntity roleEntity = roleDao.getRoleById(2);
 			studentEntity.setRole(roleEntity);
-			userService.addUser(studentEntity);
+			userService.addUser(studentEntity); //confirmation false par défaut
 			System.out.println(studentEntity.getFirstName());
-			return "redirect:/loginDirect";
+			return "redirect:/loginDirect"; //URL
 		}else{
 			return "login";
 		}

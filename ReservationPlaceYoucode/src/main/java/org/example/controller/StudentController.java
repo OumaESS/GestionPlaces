@@ -27,6 +27,7 @@ public class StudentController {
 
 
 
+    //les cliques pour ajouter un reserv
     @RequestMapping(value = "/prossecRes")
     public  String ProsseRes(@ModelAttribute("res") ReservationEntity reservationEntity)
     {
@@ -38,6 +39,7 @@ public class StudentController {
     }
 
 
+    //l'afficahge du dashbord
     @RequestMapping(value = "dashbord")
     public String rege(@ModelAttribute("dashbord") ReservationEntity reservationEntity, Model model, HttpSession session){
 
@@ -61,6 +63,8 @@ public class StudentController {
 
     }
 
+
+    //affichage du page edite profile
     @RequestMapping(value = "EditPfS")
     public String Edit(@ModelAttribute("EditPfS") UsersEntity usersEntity, Model model, HttpSession session)
     {
@@ -71,6 +75,7 @@ public class StudentController {
     }
 
 
+    //update profil
     @RequestMapping(value = "ProsseModifPr")
     public String ModifProfile(HttpServletRequest req, HttpSession session)
     {
@@ -92,6 +97,7 @@ public class StudentController {
         return "redirect:/dashbord";
     }
 
+    //delete reserv
     @RequestMapping(value = "deleteRestudent")
     public String deleteRes(HttpServletRequest req)
     {
